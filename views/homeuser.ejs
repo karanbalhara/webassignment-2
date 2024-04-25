@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Driver Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/google_health_nhs_hero.width-1200.format-webp.webp);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image:url(https://png.pngtree.com/thumb_back/fh260/back_our/20190625/ourmid/pngtree-medical-care-safety-health-banner-image_261185.jpg);
+            padding:20px;
+            text-align: left;
+        }
+
+        nav {
+            background-color: black;
+            padding: 6px;
+            text-align: center;
+        }
+
+        nav a {
+            color:white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color:#007bff;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            opacity: 0.8;
+            padding-bottom: 200px;
+        }
+
+        h1 {
+            color: rgb(12, 12, 12);
+            padding:10px;
+            font-size: 60px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        footer {
+            background-color: black;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .book-button {
+            background-image: url(https://www.shutterstock.com/image-vector/plus-sign-black-on-red-600w-1302306409.jpg);
+            background-size: cover;
+            color: #fff;
+            border: 5px solid black;
+            border-radius: 90%;
+            margin-top: 170px;
+            padding: 20px 30px;
+            font-size: 100px;
+            cursor: pointer;
+            transition: background-image 0.3s;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .book-button:hover {
+            background-image: url(https://cdn2.vectorstock.com/i/1000x1000/14/61/plus-icon-white-on-the-blue-background-vector-3451461.jpg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><b>Lifeguard Ambulance Services</b></h1>
+    </header>
+    <nav>
+        <a href="homeuser">Home</a>
+        <a href="aboutus">About Us</a>
+        <a href="contact">Contacts</a>
+        <a href="hospitals">Hospitals Nearby</a>
+    </nav>
+    <div class="container">
+        <button class="book-button" onclick="confirmBooking()">Book</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 @lifeguardambulaceservice. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function confirmBooking() {
+            var confirmation = confirm("Are you sure you want to book?");
+            if (confirmation) {
+                // Proceed with booking action
+                // You can add the booking logic here
+                alert("Booking confirmed!");
+            } else {
+                // Do nothing or handle cancellation
+                alert("Booking canceled.");
+            }
+        }
+    </script>
+</body>
+</html>

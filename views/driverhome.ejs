@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Driver Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/google_health_nhs_hero.width-1200.format-webp.webp);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image:url(https://png.pngtree.com/thumb_back/fh260/back_our/20190625/ourmid/pngtree-medical-care-safety-health-banner-image_261185.jpg);
+            padding:20px;
+            text-align: left;
+        }
+
+        nav {
+            background-color: black;
+            padding: 6px;
+            text-align: center;
+        }
+
+        nav a {
+            color:white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color:#007bff;
+        }
+
+        .container {
+            margin: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(12, 12, 12);
+            padding:10px;
+            font-size: 60px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        footer {
+            background-color: black;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .patient-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .patient {
+            width: calc(33.33% - 20px);
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+
+        .patient:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .patient img {
+            max-width: 80%;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .patient:hover img {
+            transform: scale(1.1);
+        }
+
+        .patient-details {
+            margin-top: 10px;
+        }
+
+        .patient-details p {
+            margin: 5px 0;
+        }
+
+        .accept-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .accept-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><b>Lifeguard Ambulance Services</b></h1>
+    </header>
+    <nav>
+        <a href="driverhome">Home</a>
+        <a href="aboutus">About Us</a>
+        <a href="contact">Contacts</a>
+        <a href="hospitals">Hospitals Nearby</a>
+    </nav>
+    <div class="container">
+        <h2 style="background-color: white; padding:10px; margin-left:250px; margin-right: 250px;"><b>Emergency Patients Nearby</b></h2>
+        <ul class="patient-list">
+            <li class="patient">
+                <img src="https://www.shutterstock.com/shutterstock/photos/215925769/display_1500/stock-vector-sick-man-215925769.jpg" alt="Patient 1">
+                <div class="patient-details">
+                    <p><strong>Ansh kumar</strong></p>
+                    <p>Location A</p>
+                    <!-- Add more details as needed -->
+                    <button class="accept-button">Accept</button>
+                </div>
+            </li>
+            <li class="patient">
+                <img src="https://www.shutterstock.com/shutterstock/photos/215925769/display_1500/stock-vector-sick-man-215925769.jpg" alt="Patient 2">
+                <div class="patient-details">
+                    <p><strong>Aryan rana</strong></p>
+                    <p>Location B</p>
+                    <!-- Add more details as needed -->
+                    <button class="accept-button">Accept</button>
+                </div>
+            </li>
+            <li class="patient">
+                <img src="https://www.shutterstock.com/shutterstock/photos/215925769/display_1500/stock-vector-sick-man-215925769.jpg" alt="Patient 3">
+                <div class="patient-details">
+                    <p><strong>Manish Singh</strong></p>
+                    <p>Location C</p>
+                    <!-- Add more details as needed -->
+                    <button class="accept-button">Accept</button>
+                </div>
+            </li>
+            <li class="patient">
+                <img src="https://www.shutterstock.com/shutterstock/photos/215925769/display_1500/stock-vector-sick-man-215925769.jpg" alt="Patient 3">
+                <div class="patient-details">
+                    <p><strong>Raghav Shukla</strong></p>
+                    <p>Location d</p>
+                    <!-- Add more details as needed -->
+                    <button class="accept-button">Accept</button>
+                </div>
+            </li>
+            <!-- Add more patients as needed -->
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2024 @lifeguardambulaceservice. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

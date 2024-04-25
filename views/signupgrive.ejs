@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/google_health_nhs_hero.width-1200.format-webp.webp);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .signup-container {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-image: url(https://www.shutterstock.com/shutterstock/photos/1912819843/display_1500/stock-vector-plus-sign-healthcare-icon-design-template-vector-isolated-illustration-1912819843.jpg);
+            background-size: cover;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="file"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Signup</h2>
+        <form id="signup-form" action="driverhome" method="POST" enctype="multipart/form-data" >
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name on License:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Create Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="driving_license">Driving License Number:</label>
+                <input type="text" id="driving_license" name="driving_license" required>
+            </div>
+            <div class="form-group">
+                <label for="ambulance_number">Ambulance Number:</label>
+                <input type="text" id="ambulance_number" name="ambulance_number" required>
+            </div>
+            <div class="form-group">
+                <label for="registration_number">Registration Number:</label>
+                <input type="text" id="registration_number" name="registration_number" required>
+            </div>
+            <div class="form-group">
+                <label for="rc_photo">Photo of RC (Registration Certificate):</label>
+                <input type="file" id="rc_photo" name="rc_photo" accept="image/*" required>
+            </div>
+            <button >Signup</button>
+        </form>
+        <div class="login-link">
+            <span style="color:#fff">Already have an account? </span>
+            <a href="logindriver">Login</a>
+        </div>
+    </div>
+</body>
+</html>

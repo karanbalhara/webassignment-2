@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/google_health_nhs_hero.width-1200.format-webp.webp);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .options-container {
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        .options-container .option-button {
+            width: 200px;
+            height: 200px;
+            margin: 40px;
+            background-image: url(https://www.shutterstock.com/shutterstock/photos/1912819843/display_1500/stock-vector-plus-sign-healthcare-icon-design-template-vector-isolated-illustration-1912819843.jpg);
+            color: black;
+            background-size: cover;
+            border: none;
+            border-radius: 50%;
+            font-size: 26px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+
+        .options-container .option-button:hover {
+            background-image: url(https://cdn3.vectorstock.com/i/1000x1000/75/42/healthcare-plus-sign-medical-symbol-vector-33727542.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="options-container">
+        <h2 style="background-image: url(https://as1.ftcdn.net/v2/jpg/04/80/10/80/1000_F_480108027_fY9uuOWgKDHGuZvqXxTdYAMBzCB8ZkFz.jpg); background-size: cover; padding:30px; border: 1px solid black; font-size: 40px;" >Login As:</h2>
+        <button class="option-button" onclick="location.href='loginpage'"><b>User</b></button>
+        <button class="option-button" onclick="location.href='logindriver'"><b>Ambulance Driver</b></button>
+    </div>
+</body>
+</html>
