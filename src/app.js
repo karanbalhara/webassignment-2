@@ -20,9 +20,17 @@ app.get("/",(req,res)=>{
     //res.sendFile(__dirname+"/index.html");
     res.render('aboutus');
   });
+  app.get("/aboutus1",(req,res)=>{
+    //res.sendFile(__dirname+"/index.html");
+    res.render('aboutus1');
+  });
   app.get("/contact",(req,res)=>{
     //res.sendFile(__dirname+"/index.html");
     res.render('contact');
+  });
+  app.get("/contact1",(req,res)=>{
+    //res.sendFile(__dirname+"/index.html");
+    res.render('contact1');
   });
   app.get("/driverhome",(req,res)=>{
     //res.sendFile(__dirname+"/index.html");
@@ -35,6 +43,10 @@ app.get("/",(req,res)=>{
   app.get("/hospitals",(req,res)=>{
     //res.sendFile(__dirname+"/index.html");
     res.render('hospitals');
+  });
+  app.get("/hospitals1",(req,res)=>{
+    //res.sendFile(__dirname+"/index.html");
+    res.render('hospitals1');
   });
   app.get("/logindriver",(req,res)=>{
     //res.sendFile(__dirname+"/index.html");
