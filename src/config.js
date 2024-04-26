@@ -1,14 +1,15 @@
 const mongoose = require("mongoose");
-const connect = mongoose.connect("mongodb://localhost:27017/ambulance");
 
-connect.then(()=> {
-    console.log("Database connected Successfully");
-})
-.catch(()=> {
-    console.log("Database cannot be connected");
+// Connect to the MongoDB database
+mongoose.connect("mongodb://localhost:27017/ambulance", { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log("Database connected successfully");
+    })
+    .catch((error) => {
+        console.error("Database connection error:", error);
+    });
 
-});
-
+// Define the ambulance schema
 const ambulanceSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -18,8 +19,11 @@ const ambulanceSchema = new mongoose.Schema({
         type: String,
         required: true
     }
+
+    
 });
 
-const collection = new mongoose.model("user",ambulanceSchema);
+// Create a model based on the ambulance schema
+const collection = mongoose.model("user", ambulanceSchema);
 
-module.exports = collection;
+module.exports = collection;
