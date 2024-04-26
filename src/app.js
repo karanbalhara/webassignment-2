@@ -54,43 +54,81 @@ app.get("/",(req,res)=>{
       res.render('singup');
   });
 
-  app.post("/singup",async(req, res) => {
-    const data =  {
-        name: req.body.name,
+  app.post("/singup", async (req, res) => {
+    const data = {
+        name: req.body.name, // Include the 'name' field
         password: req.body.password
-    }
-    const existingUser = await collection.findOne({name: data.name});
-    if (existingUser){
-        res.send("User already exists. Please choose a different username.");
-    }else{
-  
-    const userdata= await collection.insertMany(data);
-    console.log(userdata);
-    }
-    { res.render("homeuser");
-}
-    });
-    
-    app.post("/loginpage", async(req,res ) =>{
-    
-        try{
-    const check = await collection.findOne({name: req.body.name});
-    if (!check){
-        req.send("wrong password");
-    
-    }
-    const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
-    if (!isPasswordMatch){
-        res.render("homeuser");
+    };
 
-    
+    try {
+        const existingUser = await collection.findOne({ name: data.name });
+        if (existingUser) {
+            res.send("User already exists. Please choose a different username.");
+        } else {
+            const newUser = await collection.create(data); // Use create instead of insertMany for single document insertion
+            console.log(newUser);
+            res.render("homeuser");
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("An error occurred while processing your request.");
     }
+});
     
-    }catch{
-        res.send("wrong details");
+app.post("/loginpage", async (req, res) => {
+  try {
+      const check = await collection.findOne({ name: req.body.name }); // Change 'user' to 'username'
+      if (!check) {
+          return res.send("User not found."); // Return the response to avoid sending multiple responses
+      }
+      const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
+      if (!isPasswordMatch) {
+          return res.render("homeuser");
+      }
+      res.render("homeuser");
+  } catch (error) {
+      console.error(error);
+      res.status(500).send("An error occurred while processing your request.");
+  }
+});
 
-    }
-    });
+app.post("/signupgrive", async (req, res) => {
+  const data = {
+      name: req.body.name, // Include the 'name' field
+      password: req.body.password
+  };
+
+  try {
+      const existingUser = await collection.findOne({ name: data.name });
+      if (existingUser) {
+          res.send("User already exists. Please choose a different username.");
+      } else {
+          const newUser = await collection.create(data); // Use create instead of insertMany for single document insertion
+          console.log(newUser);
+          res.render("driverhome");
+      }
+  } catch (error) {
+      console.error(error);
+      res.status(500).send("An error occurred while processing your request.");
+  }
+});
+app.post("/logindriver", async (req, res) => {
+  try {
+      const check = await collection.findOne({ name: req.body.name }); // Change 'user' to 'username'
+      if (!check) {
+          return res.send("User not found."); // Return the response to avoid sending multiple responses
+      }
+      const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
+      if (!isPasswordMatch) {
+          return res.render("driverhome");
+      }
+      res.render("driverhome");
+  } catch (error) {
+      console.error(error);
+      res.status(500).send("An error occurred while processing your request.");
+  }
+});
+
 
 const port = 3000;
 app.listen(port,()=> {
