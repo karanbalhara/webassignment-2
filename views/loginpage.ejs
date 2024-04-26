@@ -72,10 +72,10 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form id="login-form" action="homeuser" method="POST">
+        <form id="login-form" action="loginpage" method="POST">
             <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="name">name:</label>
+                <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
@@ -90,7 +90,7 @@
     </div>
     <script>
         document.getElementById("login-form").addEventListener("submit", function(event) {
-            var username = document.getElementById("username").value;
+            var username = document.getElementById("name").value;
             var password = document.getElementById("password").value;
 
             if (username === "" || password === "") {
